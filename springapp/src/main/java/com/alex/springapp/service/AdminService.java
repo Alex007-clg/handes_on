@@ -17,6 +17,7 @@ import jakarta.transaction.Transactional;
 public class AdminService {
     @Autowired
     AdminRepo obj;
+    //JPQL
 
     public List<Admin> getAllAdmins() {
         return obj.getUsers();
