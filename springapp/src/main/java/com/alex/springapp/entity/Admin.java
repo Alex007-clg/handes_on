@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,6 +19,8 @@ public class Admin {
     public String name;
     @Column (name = "email")
     public String email;
+    @OneToOne(mappedBy = "admin")
+    private AdminDetails adminDetails;
     public int getId() {
         return id;
     }
